@@ -1,0 +1,13 @@
+Setup: 
+    $ mkdir -p rest
+    $ cd rest
+    $ python3 -m venv venv
+    $ source venv/bin/activate
+    $ pip freeze
+    $ code .
+    Then you create a requirement.txt file with required packages inside
+    $ pip install -r requirement.txt
+    $ pip install --upgrade pip
+    New folder backend and py_client for FE
+    $ cd backend
+    $ django-admin startproject
