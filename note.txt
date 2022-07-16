@@ -11,3 +11,4 @@ Setup:
     New folder backend and py_client for FE
     $ cd backend
     $ django-admin startproject
+
