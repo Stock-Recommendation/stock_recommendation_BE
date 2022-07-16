@@ -2,7 +2,7 @@
 
 ## How to clone this project
 1. Open the terminal in the destination folder
-2. `$ git clone `
+2. `$ git clone https://github.com/Stock-Recommendation/stock_recommendation_BE.git`
 3. Create virtual env right in the folder: `$ python3 -m venv .`
 4. Install required packages: `$ pip install -r requirements.txt` and (optional) `$ pip install --upgrade pip`
 5. `cd backend`
