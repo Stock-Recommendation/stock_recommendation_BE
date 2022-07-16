@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+bin
 __pycache__/
 *.py[cod]
 *$py.class
@@ -21,7 +22,7 @@ sdist/
 var/
 wheels/
 pip-wheel-metadata/
-share/python-wheels/
+share
 *.egg-info/
 .installed.cfg
 *.egg
