@@ -17,3 +17,4 @@ Setup:
 @property: declare additional properties
 use serializers to access property
 Model.objects.create("key":"value" pairs)
+detail view: create urls.py, update urls in admin dir, new views.py
