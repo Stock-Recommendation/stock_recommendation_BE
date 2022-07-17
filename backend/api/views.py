@@ -5,7 +5,9 @@ from django.forms.models import model_to_dict
 from products.models import Product
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from products.serializers import ProductSerializer
+from carts.models import Cart
+from carts.serializers import CartSerializer
 # declare allowed methods
 
 
@@ -13,9 +15,12 @@ from rest_framework.response import Response
 def api_home(request: HttpRequest, *args, **kwargs):
     """DRF API View
     """
-    model_data = Product.objects.all().order_by("?").first()
+    instance = Product.objects.all().order_by("?").first()
+    # instance = Cart.objects.all().order_by("?").last()
     data = {}
-    if model_data:
-        data = model_to_dict(model_data, fields=['id', 'price'])
+    if instance:
+        # data = model_to_dict(model_data, fields=['id', 'price'])
+        # data = CartSerializer(instance).data
+        data=ProductSerializer(instance).data
         print(data)
     return Response(data)
