@@ -19,4 +19,4 @@ def api_home(request: HttpRequest, *args, **kwargs):
     if serializer.is_valid(raise_exception=True):
         print(serializer.data)
         return Response(serializer.data)
-    return Repsonse({"invalid": "bad request"}, status=400)
+    return Response({"invalid": "bad request"}, status=400)
