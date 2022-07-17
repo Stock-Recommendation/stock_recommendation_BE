@@ -5,4 +5,4 @@ import requests
 endpoint = "http://localhost:8000/api/" #http://127.0.0.1:8000/
 get_response = requests.get(endpoint, params={'abc':12}, json={"query": "hello shit"})
 
-print(get_response.text)
+print(get_response.headers)
