@@ -18,3 +18,4 @@ Setup:
 use serializers to access property
 Model.objects.create("key":"value" pairs)
 detail view: create urls.py, update urls in admin dir, new views.py
+perform_create: custom create
