@@ -10,17 +10,13 @@ from carts.models import Cart
 from carts.serializers import CartSerializer
 # declare allowed methods
 
-
-@api_view(['GET'])
+from django.http import JsonResponse
+@api_view(['POST'])
 def api_home(request: HttpRequest, *args, **kwargs):
     """DRF API View
     """
-    instance = Product.objects.all().order_by("?").first()
-    # instance = Cart.objects.all().order_by("?").last()
-    data = {}
-    if instance:
-        # data = model_to_dict(model_data, fields=['id', 'price'])
-        # data = CartSerializer(instance).data
-        data=ProductSerializer(instance).data
-        print(data)
-    return Response(data)
+    serializer = ProductSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        print(serializer.data)
+        return Response(serializer.data)
+    return Repsonse({"invalid": "bad request"}, status=400)
