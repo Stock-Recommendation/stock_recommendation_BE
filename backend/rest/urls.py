@@ -22,5 +22,6 @@ urlpatterns = [
     path('api/', include('api.urls')), #better pagination
     path('api/products/', include('products.urls')),
     path('api/carts/', include('carts.urls')),
+    path('api/stocks/', include('stocks.urls')),
 ]
 
