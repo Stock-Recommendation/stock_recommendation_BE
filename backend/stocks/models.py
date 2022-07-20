@@ -1,5 +1,5 @@
 from django.db import models
- 
+from prepare_data import create
 # Create your models here.
 class Stock(models.Model):
     ticker = models.CharField(max_length=4)
@@ -12,4 +12,6 @@ class Stock(models.Model):
     # predicted_price_1m = models.FloatField()
     # predicted_price_3m = models.FloatField()
     # historical_accuracy = models.FloatField()
-    
+
+# create()
+update()
