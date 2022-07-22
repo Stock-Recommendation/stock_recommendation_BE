@@ -1,0 +1,22 @@
+Setup: 
+    $ mkdir -p rest
+    $ cd rest
+    $ python3 -m venv venv
+    $ source venv/bin/activate
+    $ pip freeze
+    $ code .
+    Then you create a requirement.txt file with required packages inside
+    $ pip install -r requirement.txt
+    $ pip install --upgrade pip
+    New folder backend and py_client for FE
+    $ cd backend
+    $ django-admin startproject
+
+`model_to_data`: well...
+@api_view
+@property: declare additional properties
+use serializers to access property
+Model.objects.create("key":"value" pairs)
+detail view: create urls.py, update urls in admin dir, new views.py
+perform_create: custom create
+dont use list deail vie, use listcreateview, then consume it with get and post
