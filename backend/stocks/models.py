@@ -14,4 +14,8 @@ class Stock(models.Model):
     # historical_accuracy = models.FloatField()
 
 # create()
+<<<<<<< HEAD
 # update()
+=======
+update()
+>>>>>>> origin/master
