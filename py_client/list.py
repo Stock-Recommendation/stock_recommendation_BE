@@ -9,3 +9,4 @@ data = {
 }
 get_response = requests.get(endpoint, json=data)
 print(get_response.json())
+

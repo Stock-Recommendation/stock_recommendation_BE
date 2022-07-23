@@ -7,9 +7,10 @@ class StockSerializer(serializers.ModelSerializer):
         model = Stock
         fields = [
             'ticker',
-            'stock_id',
-            # 'market_cap',
-            # 'current_price',
+            # 'stock_id',
+            'stock_name',
+            'market_cap',
+            'current_price',
             # 'stock_performance_graph',
             # 'predicted_price_1d',
             # 'predicted_price_1w',
