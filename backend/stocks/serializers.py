@@ -12,9 +12,9 @@ class StockSerializer(serializers.ModelSerializer):
             'market_cap',
             'current_price',
             # 'stock_performance_graph',
-            # 'predicted_price_1d',
-            # 'predicted_price_1w',
-            # 'predicted_price_1m',
-            # 'predicted_price_3m',
+            'predicted_price_1d',
+            'predicted_price_1w',
+            'predicted_price_1m',
+            'predicted_price_3m',
             # 'historical_accuracy',
         ]

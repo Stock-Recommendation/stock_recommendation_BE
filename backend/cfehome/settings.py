@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
+    'cronjobs'
 
     # internal apps
     'api',
@@ -173,3 +174,7 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": datetime.timedelta(seconds=30), # minutes=5
     "REFRESH_TOKEN_LIFETIME": datetime.timedelta(minutes=1), # days=1
 }
+
+# CRON_JOBS = {
+
+# }
