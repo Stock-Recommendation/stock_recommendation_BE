@@ -4,3 +4,13 @@ share
 rest.code-workspace
 **/__pycache__
 __pycache__*
+.vscode
+./py_client
+./share
+__pycache__
+./backend/api/__pycache__
+./backend/carts/__pycache__
+./backend/articles/__pycache__
+./backend/products/__pycache__
+./backend/rest/__pycache__
+./backend/stocks/__pycache__
