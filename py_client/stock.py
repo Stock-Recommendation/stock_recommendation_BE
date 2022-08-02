@@ -21,10 +21,10 @@ for stock in stocks:
     ticker = stock
     name = finnhub_client.company_profile2(symbol=stock)["name"]
     market_cap = finnhub_client.company_profile2(symbol=stock)["marketCapitalization"]
+    current_price = finnhub_client.quote(stock)["c"]
+    res.append([ticker, name, market_cap, current_price])
     # web_url = finnhub_client.company_profile2(symbol=stock)["weburl"]
     # historical_price = finnhub_client.stock_candles(stock, 'M', utc_time_from, utc_time_to)['c']
     # time_stamp = finnhub_client.stock_candles(stock, 'M', utc_time_from, utc_time_to)['t']
-    current_price = finnhub_client.quote(stock)["c"]
     # print(stock)
-    res.append([ticker, name, market_cap, current_price])
 print(res)

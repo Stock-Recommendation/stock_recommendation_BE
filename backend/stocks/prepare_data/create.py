@@ -14,6 +14,7 @@ finnhub_client = finnhub.Client(api_key="cbdmpuaad3i64n13s900")
 # ML model with cronjobs scheduled
 # consider putting @cronjobs.register here
 
+
 def process(stock) -> pd.DataFrame:
     tweet_ids = []
     historical_price = finnhub_client.stock_candles(
@@ -25,6 +26,8 @@ def process(stock) -> pd.DataFrame:
     return [predicted_price_1d, predicted_price_1w, predicted_price_1m, predicted_price_3m]
 
 # main function to process everything with cronjobs scheduled
+
+
 @cronjobs.register
 def create():
     stocks = finnhub_client.indices_const(symbol="^OEX")['constituents'][:30]

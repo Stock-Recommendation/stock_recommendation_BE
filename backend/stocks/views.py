@@ -15,6 +15,7 @@ def product_alt_view(request, pk=None, *args, **kwargs):
     method = request.method
     if method == 'GET':
         if pk is not None:
+            print(pk)
             obj = get_object_or_404(Stock, pk=pk)
             data = StockSerializer(obj, many=False).data
             return Response(data)
