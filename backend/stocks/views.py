@@ -14,6 +14,7 @@ from .prepare_data import create
 def product_alt_view(request, pk=None, *args, **kwargs):
     method = request.method
     if method == 'GET':
+        # create.create()
         if pk is not None:
             obj = get_object_or_404(Stock, pk=pk)
             data = StockSerializer(obj, many=False).data
