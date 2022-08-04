@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-cn9t#dfjhxs%_cyenom8%qjkj=m^n(@0z85itbf+9f)o-d_13q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kiento.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', 'kiento.pythonanywhere.com']
 
 
 # Application definition
@@ -48,9 +48,9 @@ INSTALLED_APPS = [
 
     # internal apps
     'api',
-    'articles',
-    'products',
-    'search',
+    # 'articles',
+    # 'products',
+    'stocks',
 ]
 
 MIDDLEWARE = [
