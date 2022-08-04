@@ -6,3 +6,5 @@ pyyaml
 requests
 django-cors-headers
 Pillow
+# django_cronjobs
+finnhub
