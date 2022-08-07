@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
-    'cronjobs'
-
+    'cronjobs', 
+    'django_cron',
     # internal apps
     'api',
     'articles',
@@ -178,3 +178,7 @@ SIMPLE_JWT = {
 # CRON_JOBS = {
 
 # }
+CRON_CLASSES = [
+    "stocks.cron.MyCronJob",
+    # ...
+]

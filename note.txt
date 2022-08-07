@@ -20,3 +20,7 @@ Model.objects.create("key":"value" pairs)
 detail view: create urls.py, update urls in admin dir, new views.py
 perform_create: custom create
 dont use list deail vie, use listcreateview, then consume it with get and post
+
+Cron:
+https://django-cron.readthedocs.io/en/latest/installation.html
+rmb to run `python manage.py migrate django_cron` to add runcrons
