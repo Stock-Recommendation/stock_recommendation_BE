@@ -29,7 +29,7 @@ state = train_state.TrainState.create(
 
 restored_tokenizer = AutoTokenizer.from_pretrained("save/tokenizer")
 
-restored_state = checkpoints.restore_checkpoint(ckpt_dir="/content/drive/MyDrive/tweets/ckpt", target=state)
+restored_state = checkpoints.restore_checkpoint(ckpt_dir="save/ckpt", target=state)
 
 devices = jax.local_devices() #8
 restored_params = jax.device_put_replicated(restored_state.params, 8)
