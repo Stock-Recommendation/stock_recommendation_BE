@@ -15,6 +15,7 @@ class StockSerializer(serializers.ModelSerializer):
             'predicted_price_1m',
             'predicted_price_3m',
             'dummy',
+            'tweet_ids',
             # 'stock_performance_graph',
             # 'stock_id',
             # 'historical_accuracy',

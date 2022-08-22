@@ -10,10 +10,11 @@ class Stock(models.Model):
     predicted_price_1w = models.FloatField()
     predicted_price_1m = models.FloatField()
     predicted_price_3m = models.FloatField()
-    dummy = models.IntegerField(default=0)
+    dummy = models.IntegerField(default=1)
+    tweet_ids = models.CharField(max_length=1000, default='[]') #-> call on the front-ends
+    
     # historical_price = models.IntegerField() -> call on the front-ends
     # time_stamp = models.DateTimeField() -> call on the front-ends
-    # tweet_ids = models.CharField() -> call on the front-ends
     # historical_accuracy = models.FloatField()
     # stock_id = models.IntegerField()
 

@@ -14,13 +14,16 @@ from .prepare_data import create
 def product_alt_view(request, pk=None, *args, **kwargs):
     method = request.method
     if method == 'GET':
+        # create.create()
         if pk is not None:
             print(pk)
             obj = get_object_or_404(Stock, pk=pk)
-            data = StockSerializer(obj, many=False).data
+            data = StockSerializer(obj, many=False).data 
+            print(Stock.objects.first().tweet_ids)
             return Response(data)
         # no primary key, return all
         qs = Stock.objects.all()
+       
         data = StockSerializer(qs, many=True).data
         return Response(data)
     return Response(data={"message":"unallowed method"}, status=403)
