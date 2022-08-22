@@ -7,16 +7,15 @@ from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework import generics, mixins
-from .prepare_data import create
-
+from .prepare_data import create, update
 #only allow get for client
 @api_view(['GET'])
 def product_alt_view(request, pk=None, *args, **kwargs):
     method = request.method
     if method == 'GET':
         # create.create()
+        update.update_tweet_ids()
         if pk is not None:
-            print(pk)
             obj = get_object_or_404(Stock, pk=pk)
             data = StockSerializer(obj, many=False).data 
             print(Stock.objects.first().tweet_ids)
